@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="trainings-portal">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yvonne & Björn</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JS -->
+    <script src="./libs/jquery/dist/jquery.min.js"></script>
+    <script src="./libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./libs/angular/angular.js"></script>
+    <script src="./libs/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Angular Custom -->
+    <script src="./js/app.js"></script>
+    <script src="./js/constants.js"></script>
+    
+    <!-- <script src="./js/services/tickets.service.js"></script> -->
+    <script src="./js/services/authentication.service.js"></script>
+
+    <!-- <script src="./js/controller/open.controller.js"></script> -->
+    <!-- <script src="./js/controller/archive.controller.js"></script> -->
+    <script src="./js/controller/app.controller.js"></script>
+    <script src="./js/controller/authentication.controller.js"></script>
+    <script src="./js/controller/signup.controller.js"></script>
+    <script src="./js/controller/dashboard.controller.js"></script>
+
+    <script src="./js/directives/imageContainer.directive.js"></script>
+    <script src="./js/directives/titleWrapper.directive.js"></script>
+
+    <script src="./js/custom.js"></script>
+  </head>
+  <body ng-controller="AppController">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar background-ci-color navbar-dark navbar-expand-lg">
+        <a class="navbar-brand" ui-sref="welcome"><span class="fa fa-heart"></span> Yvonne & Björn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" ui-sref="invitation">Einladung<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ui-sref="locations">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ui-sref="schedule">Tagesablauf</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ui-sref="accomodation">Unterkünfte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rückmeldung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trauzeugen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Das Brautpaar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
