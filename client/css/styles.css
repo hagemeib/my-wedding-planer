@@ -125,15 +125,35 @@
   opacity: 0.75;
 }
 
+/*
+ * Stylings for login container
+ */
+.login-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, .6);
+  z-index: 4;
+}
+.login-form-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+}
+
 /* 
  * Styling for middle sized screens
  */
 @media only screen and (min-width:40.0625em) {
-  .imageContainer .title-wrapper h1 {
+  .title-wrapper h1 {
     font-size: 3.75em;
   }
 
-  .imageContainer .title-wrapper h2 {
+  .title-wrapper h2 {
     font-size: 2em;
   }
 }
@@ -142,7 +162,7 @@
  * Styling for large sized screens
  */
 @media only screen and (min-width:64.0625em) {
-  .imageContainer .title-wrapper {
+  .title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -150,15 +170,15 @@
     width: 100%;
   }
 
-  .imageContainer .title-wrapper .title {
+  .title-wrapper .title {
     text-shadow: 3px 10px 1px #B22222;
   }
 
-  .imageContainer .title-wrapper h1 {
+  .title-wrapper h1 {
     font-size: 5em;
   }
 
-  .imageContainer .title-wrapper h2 {
+  .title-wrapper h2 {
     font-size: 2.5em;
   }
 }

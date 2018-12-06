@@ -3,30 +3,41 @@ var TrainingsPortal = TrainingsPortal || angular.module('trainings-portal', ['ui
 TrainingsPortal.config(function ($stateProvider, $urlRouterProvider) {
   
   $stateProvider
+    .state('login', {
+      url: '/login',
+      templateUrl: '../views/welcome.login.html',
+      requireLogin: false,
+      controller: 'AuthenticationController'
+    })
     .state('welcome', {
       url: '/welcome',
       templateUrl: '../views/welcome.html',
-      requireLogin: false
+      requireLogin: true
     })
     .state('invitation', {
       url: '/invitation',
       templateUrl: '../views/invitation.html',
-      requireLogin: false,
+      requireLogin: true,
     })
     .state('locations', {
       url: '/locations',
       templateUrl: '../views/locations.html',
-      requireLogin: false,
+      requireLogin: true,
     })
     .state('schedule', {
       url: '/schedule',
       templateUrl: '../views/schedule.html',
-      requireLogin: false,
+      requireLogin: true,
     })
     .state('accomodation', {
       url: '/accomodation',
       templateUrl: '../views/accomodation.html',
-      requireLogin: false,
+      requireLogin: true,
+    })
+    .state('feedback', {
+      url: '/feedback',
+      templateUrl: '../views/feedback.html',
+      requireLogin: true,
     })
     .state('app', {
       url: '',
@@ -39,7 +50,7 @@ TrainingsPortal.config(function ($stateProvider, $urlRouterProvider) {
       requireLogin: true
     });
 
-  $urlRouterProvider.otherwise('/welcome');
+  $urlRouterProvider.otherwise('/login');
 
 })
 

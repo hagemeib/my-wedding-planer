@@ -1,18 +1,24 @@
-<page-header></page-header>
+<div class="background-image-container" style="background-image: url('images/yvonne_ich.jpg')">
+    <title-wrapper 
+        title1="Yvonne & Björn heiraten" 
+        title2="Wir freuen uns auf euch!">
+    </title-wrapper>
 
-<div class="container-fluid content text-center" ng-controller="AuthenticationController">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Login to your Account</h1>
+    <div class="login-container" ng-controller="AuthenticationController">
+        <div class="login-form-container">
+            <h1>Geben Sie hier bitte das Kennwort aus der Einladung ein:</h1>
             <div>
                 <label class="item item-input">
-                    <input type="text" placeholder="Email" ng-model="User.email">
+                    <input type="hidden" ng-model="User.email" value="hochzeit@yb.de">
                 </label>
                 <label class="item item-input">
-                    <input type="password" placeholder="Password" ng-model="User.password">
+                    <input type="password" placeholder="Kennwort" ng-model="User.password">
                 </label>
             </div>
             <button class="btn btn-primary" ng-click="login()">Login</button>
+            <button class="btn btn-primary" ng-show="isAuthenticated()" ng-click="logout()">Abmelden</button>
         </div>
     </div>
 </div>
+
+
