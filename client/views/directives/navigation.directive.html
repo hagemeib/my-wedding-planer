@@ -1,0 +1,39 @@
+<!-- NAVIGATION -->
+<nav class="navbar background-ci-color navbar-dark navbar-expand-lg">
+    <a class="navbar-brand" ui-sref="welcome"><span class="fa fa-heart"></span> Yvonne & Björn</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" ng-class="{ 'active': isActive('invitation')}">
+                <a class="nav-link" ui-sref="invitation">Einladung<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('locations')}">
+                <a class="nav-link" ui-sref="locations">Locations</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('schedule')}">
+                <a class="nav-link" ui-sref="schedule">Tagesablauf</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('accomodation')}">
+                <a class="nav-link" ui-sref="accomodation">Unterkünfte</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('feedback')}">
+                <a class="nav-link" ui-sref="feedback">Rückmeldung</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('groomsmen')}">
+                <a class="nav-link" ui-sref="groomsmen">Trauzeugen</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('newlyweds')}">
+                <a class="nav-link" ui-sref="newlyweds">Das Brautpaar</a>
+            </li>
+            <li class="nav-item" ng-class="{ 'active': isActive('contact')}">
+                <a class="nav-link" ui-sref="contact">Kontakt</a>
+            </li>
+            <li ng-show="isAuthenticated()" class="nav-item">
+                <a class="nav-link" ui-sref="login" ng-click="logout()">Abmelden</a>
+            </li>
+        </ul>
+    </div>
+</nav>

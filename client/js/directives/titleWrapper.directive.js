@@ -1,4 +1,4 @@
-TrainingsPortal.directive('titleWrapper', function() {
+WeddingPlanner.directive('titleWrapper', function() {
     return {
         restrict: 'E',
         templateUrl: 'views/directives/titleWrapper.directive.html',

@@ -1,4 +1,4 @@
-TrainingsPortal.directive('imageContainer', function() {
+WeddingPlanner.directive('imageContainer', function() {
     return {
         restrict: 'E',
         transclude: true,

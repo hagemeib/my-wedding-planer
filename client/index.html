@@ -9,7 +9,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 
     <!-- JS -->
@@ -34,47 +35,11 @@
 
     <script src="./js/directives/imageContainer.directive.js"></script>
     <script src="./js/directives/titleWrapper.directive.js"></script>
+    <script src="./js/directives/navigation.directive.js"></script>
 
     <script src="./js/custom.js"></script>
   </head>
   <body ng-controller="AppController">
-
-    <!-- NAVIGATION -->
-    <nav class="navbar background-ci-color navbar-dark navbar-expand-lg">
-        <a class="navbar-brand" ui-sref="welcome"><span class="fa fa-heart"></span> Yvonne & Björn</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" ui-sref="invitation">Einladung<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" ui-sref="locations">Locations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" ui-sref="schedule">Tagesablauf</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" ui-sref="accomodation">Unterkünfte</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Rückmeldung</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Trauzeugen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Das Brautpaar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
     <!-- MAIN CONTENT -->
     <div class="main-content">
       <div ui-view></div>

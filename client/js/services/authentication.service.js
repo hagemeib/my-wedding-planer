@@ -1,4 +1,4 @@
-TrainingsPortal
+WeddingPlanner
 
 .service('AuthService', function($q, $http, API_ENDPOINT) {
     var LOCAL_TOKEN_KEY = 'localTokenKey';

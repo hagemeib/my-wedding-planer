@@ -1,6 +1,6 @@
-var TrainingsPortal = TrainingsPortal || angular.module('trainings-portal', ['ui.router']);
+var WeddingPlanner = WeddingPlanner || angular.module('trainings-portal', ['ui.router']);
 
-TrainingsPortal.config(function ($stateProvider, $urlRouterProvider) {
+WeddingPlanner.config(function ($stateProvider, $urlRouterProvider) {
   
   $stateProvider
     .state('login', {
@@ -39,19 +39,28 @@ TrainingsPortal.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: '../views/feedback.html',
       requireLogin: true,
     })
+    .state('groomsmen', {
+      url: '/groomsmen',
+      templateUrl: '../views/groomsmen.html',
+      requireLogin: true,
+    })
+    .state('newlyweds', {
+      url: '/newlyweds',
+      templateUrl: '../views/newlyweds.html',
+      requireLogin: true,
+    })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: '../views/contact.html',
+      requireLogin: true,
+    })
     .state('app', {
       url: '',
       abstract: true,
       requireLogin: true
-    })
-    .state('dashboard', {
-      url: '/dashboard',
-      templateUrl: '../views/dashboard.html',
-      requireLogin: true
     });
 
   $urlRouterProvider.otherwise('/login');
-
 })
 
 .run(function($rootScope, $state, AuthService, AUTH_EVENTS) {

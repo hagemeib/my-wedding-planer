@@ -1,4 +1,4 @@
-TrainingsPortal.controller('SignupController', function($scope, AuthService, $state) {
+WeddingPlanner.controller('SignupController', function($scope, AuthService, $state) {
     $scope.user = {
         firstname: '',
         lastname: '',

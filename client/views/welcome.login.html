@@ -1,3 +1,4 @@
+<navigation></navigation>
 <div class="background-image-container" style="background-image: url('images/yvonne_ich.jpg')">
     <title-wrapper 
         title1="Yvonne & Björn heiraten" 
@@ -5,19 +6,22 @@
     </title-wrapper>
 
     <div class="login-container" ng-controller="AuthenticationController">
-        <div class="login-form-container">
-            <h1>Geben Sie hier bitte das Kennwort aus der Einladung ein:</h1>
-            <div>
+        <form ng-submit="isAuthenticated() ? logout() : login()" class="login-form-container">
+            <h2>Gib hier bitte das Kennwort aus der Einladung ein:</h2>
+            <div ng-hide="isAuthenticated()">
                 <label class="item item-input">
                     <input type="hidden" ng-model="User.email" value="hochzeit@yb.de">
                 </label>
                 <label class="item item-input">
-                    <input type="password" placeholder="Kennwort" ng-model="User.password">
+                    <input ng-class="{'is-invalid': error}" class="form-control login-form-password" type="password" placeholder="Kennwort" ng-model="User.password">
+                    <div class="invalid-feedback">
+                        Falsches Kennwort!
+                    </div>
                 </label>
             </div>
-            <button class="btn btn-primary" ng-click="login()">Login</button>
-            <button class="btn btn-primary" ng-show="isAuthenticated()" ng-click="logout()">Abmelden</button>
-        </div>
+            <button type="submit" class="btn" ng-hide="isAuthenticated()">Weiter</button>
+            <button type="submit" class="btn" ng-show="isAuthenticated()">Abmelden</button>
+        </form>
     </div>
 </div>
 
