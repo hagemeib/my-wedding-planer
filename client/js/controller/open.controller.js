@@ -1,4 +1,4 @@
-angular.module('trainings-portal.open', [])
+angular.module('wedding-planner.open', [])
 
 .controller('OpenController', function ($scope, $location, $route, Tickets) {
   $scope.data = {};

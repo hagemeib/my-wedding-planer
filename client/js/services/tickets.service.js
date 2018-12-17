@@ -1,4 +1,4 @@
-angular.module('trainings-portal.factories', [])
+angular.module('wedding-planner.factories', [])
 
 .factory('Tickets', function ($http) {
 

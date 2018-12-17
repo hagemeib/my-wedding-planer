@@ -28,11 +28,11 @@
             <li class="nav-item" ng-class="{ 'active': isActive('newlyweds')}">
                 <a class="nav-link" ui-sref="newlyweds">Das Brautpaar</a>
             </li>
-            <li class="nav-item" ng-class="{ 'active': isActive('contact')}">
+            <!-- <li class="nav-item" ng-class="{ 'active': isActive('contact')}">
                 <a class="nav-link" ui-sref="contact">Kontakt</a>
-            </li>
+            </li> -->
             <li ng-show="isAuthenticated()" class="nav-item">
-                <a class="nav-link" ui-sref="login" ng-click="logout()">Abmelden</a>
+                <a class="nav-link" ui-sref="login" ng-click="logout()"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
             </li>
         </ul>
     </div>

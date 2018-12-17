@@ -3,13 +3,82 @@
     <title-wrapper title1="Rückmeldung" title2="Wir freuen uns auf euch!"></title-wrapper>
     <div class="information-wrapper">
         <div class="content">
-            <p>Liebe Gäste,</p>
-            </br>
-            <p>zu unserer Hochzeit am Samstag, den 01. Juni 2019 laden wir euch recht herzlich ins schöne Freiburger Umland ein!</p>
-            <p>Gebt uns doch bitte zeitnah <a ui-sref="welcome">Bescheid</a>, ob ihr diesen Tag mit uns feiern wollt.</p>
-            <p>Liebe Grüße,</p>
-            </br>
-            <p>Yvonne und Björn</p>
+            <div class="feedback-wrapper" ng-controller="FeedbackController">
+                <div class="form-wrapper" ng-hide="feedbackSent">
+                    <div class="feedback-header">
+                        <h4>Bitte gebt uns eine Rückmeldung bis zum 28. Februar 2019.</h4>
+                    </div>
+                    <form name="submitFeedbackForm" class="submitFeedbackForm" ng-submit="submitFeedback(feedback)">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input required type="text" class="form-control" ng-model="feedback.firstname" placeholder="Vorname">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input required type="text" class="form-control" ng-model="feedback.lastname" placeholder="Nachname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" ng-model="feedback.email" placeholder="E-Mail (optional)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 participation">
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" ng-model="feedback.participate" id="participate1" value="1" ng-checked="true" ng-value="true">
+                                            <label class="form-check-label" for="participate1">Hiermit sage ich zu</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" ng-model="feedback.participate" id="participate2" value="0" ng-value="false">
+                                            <label class="form-check-label" for="participate2">Ich kann leider nicht kommen</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control" ng-model="feedback.noOfPersons" required>
+                                        <option value="" selected>Anzahl Personen</option>
+                                        <option value="1">Eine Person</option>
+                                        <option value="2">Zwei Personen</option>
+                                        <option value="3">Drei Personen</option>
+                                        <option value="4">Vier Personen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <textarea style="height: 150px;" class="form-control" ng-model="feedback.namesOfRelatives" placeholder="Verrate uns noch die Namen deiner Begleitpersonen ;)"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-check">
+                                    <input ng-model="feedback.sleepingWithUs" ng-checked="true" type="checkbox" class="form-check-input" id="sleeping-with-us">
+                                    <label class="form-check-label" for="sleeping-with-us">Ich / wir möchte(n) gerne mit euch in der Hütte übernachten!</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Absenden</button>
+                    </form>
+                </div> 
+                <div class="response-wrapper" ng-show="feedbackSent">
+                    <div class="vertical-aligned-response">
+                        <i class="response-check far fa-check-circle"></i>
+                        <h3>Vielen für Deine Rückmeldung!</h3>
+                        <button class="btn" ng-click="reload()">Weitere Rückmeldung</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

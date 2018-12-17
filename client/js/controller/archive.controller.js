@@ -1,4 +1,4 @@
-angular.module('trainings-portal.archive', [])
+angular.module('wedding-planner.archive', [])
 
 .controller('ArchiveController', function ($scope, $location, $route, Tickets) {
   $scope.data = {};

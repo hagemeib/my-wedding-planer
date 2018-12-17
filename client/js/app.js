@@ -1,4 +1,4 @@
-var WeddingPlanner = WeddingPlanner || angular.module('trainings-portal', ['ui.router']);
+var WeddingPlanner = WeddingPlanner || angular.module('wedding-planner', ['ui.router']);
 
 WeddingPlanner.config(function ($stateProvider, $urlRouterProvider) {
   
@@ -60,7 +60,7 @@ WeddingPlanner.config(function ($stateProvider, $urlRouterProvider) {
       requireLogin: true
     });
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/welcome');
 })
 
 .run(function($rootScope, $state, AuthService, AUTH_EVENTS) {

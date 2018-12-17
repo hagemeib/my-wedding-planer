@@ -1,6 +1,4 @@
-WeddingPlanner
-
-.service('AuthService', function($q, $http, API_ENDPOINT) {
+WeddingPlanner.service('AuthService', function($q, $http, API_ENDPOINT) {
     var LOCAL_TOKEN_KEY = 'localTokenKey';
     var isAuthenticated = false;
     var authToken;
