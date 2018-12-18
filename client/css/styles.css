@@ -27,6 +27,34 @@
   min-height: calc(100vh - 56px);
 }
 
+.footer {
+  background-color: #b22222;
+  color: #000;
+  padding: 30px;
+}
+
+.footer .footer-wrapper {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+.footer .footer-wrapper a {
+  color: #000;
+  text-decoration: underline;
+}
+.footer .hosting-text,
+.footer .hosting-logo,
+.footer .impressum {
+  margin: 10px 0;
+}
+
+.footer .hosting-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*
  * Navbar stylings.
  */
@@ -348,6 +376,10 @@ button {
   }
   .activity-content {
     padding: 10px 20px 0;
+  }
+
+  .footer .footer-wrapper {
+    text-align: left;
   }
 }
 
