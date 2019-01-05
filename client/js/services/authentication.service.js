@@ -43,7 +43,7 @@ WeddingPlanner.service('AuthService', function($q, $http, API_ENDPOINT) {
     
     var login = function(user) {
       return $q(function(resolve, reject) {
-        console.log("API_ENDPOINT: ", API_ENDPOINT);
+        // console.log("API_ENDPOINT: ", API_ENDPOINT);
         $http.post(API_ENDPOINT.url + '/authenticate', user).then(function(result) {
           if (result.data.success) {
             storeUserCredentials(result.data.token);
