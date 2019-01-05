@@ -33,25 +33,4 @@ WeddingPlanner.controller('FeedbackController', function ($scope, $location, $st
   $scope.loading = false;
   $scope.feedbackSent = false;
   
-  // $scope.data = {};
-  // $scope.getFeedback = function() {
-  //   Feedback.getFeedback()
-  //     .then(function(response) {
-  //       $scope.data.feedbackList = feedbackList;
-  //     })
-  //     .catch(function(error) {
-  //       console.error(error);
-  //     });
-  // };
-
-  // $scope.deleteFeedback = function(feedback) {
-  //   Feedback.deleteFeedback(feedback)
-  //   .then(function(response) {
-  //       $state.reload();
-  //   })
-  //   .catch(function(error) {
-  //       console.error(error);
-  //   });
-  // };
-
 });

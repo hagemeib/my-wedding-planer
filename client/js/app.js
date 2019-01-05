@@ -59,6 +59,11 @@ WeddingPlanner.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: '../views/impressum.html',
       requireLogin: false,
     })
+    .state('admin', {
+      url: '/admin',
+      templateUrl: '../views/admin.html',
+      requireLogin: true
+    })
     .state('app', {
       url: '',
       abstract: true,

@@ -1,0 +1,31 @@
+<navigation tab="newlyweds"></navigation>
+<div class="background-image-container" style="background-image: url('images/wedding_rings.jpg')" >
+    <title-wrapper title1="Admin - Übersicht" title2="Damit wir wissen, wer kommt!"></title-wrapper>
+    <div class="information-wrapper">
+        <div class="content" ng-controller="AdminController">
+            <h2 class="ticket-section-header">Erhaltene Rückmeldungen</h2>
+            <table style="width: 100%;">
+                <thead>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>E-Mail</th>
+                    <th>Nimmt teil</th>
+                    <th>Anzahl Personen</th>
+                    <th>Anmerkung</th>
+                    <th>Hüttenübernachtung</th>
+                </thead>
+                <tbody>
+                    <tr class ng-repeat="feedback in data.feedbackList">
+                        <td>{{ feedback.firstname }}</td>
+                        <td>{{ feedback.lastname }}</td>
+                        <td>{{ feedback.email }}</td>
+                        <td><i ng-class="{'fas fa-check': feedback.participate, 'fas fa-times': !feedback.participate}"></i></td>
+                        <td>{{ feedback.noOfPersons }}</td>
+                        <td>{{ feedback.namesOfRelatives }}</td>
+                        <td><i ng-class="{'fas fa-check': feedback.sleepingWithUs, 'fas fa-times': !feedback.sleepingWithUs}"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
