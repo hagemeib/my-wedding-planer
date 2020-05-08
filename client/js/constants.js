@@ -6,7 +6,7 @@ WeddingPlanner
 })
 
 .constant('API_ENDPOINT', {
-    url: 'https://yvonne-bjoern.bankmedia.de/api'
+    url: 'http://localhost:3000/api'
 })
 
 .constant('USER_ROLES', {
